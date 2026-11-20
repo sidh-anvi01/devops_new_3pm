@@ -4,92 +4,246 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Git & GitHub Learning</title>
+    <title>Git Command Center</title>
     <link rel="stylesheet" href="index.css">
 </head>
+
 <body>
 
     <!-- Navbar -->
     <nav class="navbar">
-        <h2>Git<span>Hub</span> Learn</h2>
+        <h2>Git<span>Hub</span> Dev</h2>
 
-        <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#features">Features</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
+        <div class="nav-links">
+            <a href="#home">Home</a>
+            <a href="#commands">Commands</a>
+            <a href="#workflow">Workflow</a>
+            <a href="#terminal">Terminal</a>
+        </div>
 
-        <button>Get Started</button>
+        <a href="#terminal" class="nav-btn">Start Coding</a>
     </nav>
 
-    <!-- Hero Section -->
-    <section class="hero">
+
+    <!-- Hero -->
+    <section class="hero" id="home">
+
         <div class="hero-content">
-            <h1>Learn Git & GitHub
-                <span>From Zero to Hero</span>
+
+            <span class="tag">DEVELOPER COMMAND CENTER</span>
+
+            <h1>
+                Master Git & GitHub
+                <span>Like A Pro Developer</span>
             </h1>
 
             <p>
-                Master version control, manage your code,
-                collaborate with developers and build
-                your software development journey.
+                Learn version control, manage repositories,
+                track changes and collaborate with developers
+                using powerful Git commands.
             </p>
 
-            <button>Start Learning</button>
-            <button class="secondary">Explore GitHub</button>
+            <a href="#commands" class="btn">Explore Commands</a>
+
+            <a href="#terminal" class="btn-outline">Open Terminal</a>
+
         </div>
 
-        <div class="hero-image">
-            <img
-              src="https://cdn-icons-png.flaticon.com/512/25/25231.png"
-              alt="GitHub Logo">
+        <div class="hero-terminal">
+
+            <div class="terminal-header">
+                <span></span>
+                <span></span>
+                <span></span>
+                <p>bash — terminal</p>
+            </div>
+
+            <div class="terminal-body">
+                <p class="green">$ git init</p>
+                <p>Initialized empty Git repository</p>
+
+                <p class="green">$ git add .</p>
+                <p>Files added successfully</p>
+
+                <p class="green">$ git commit -m "first commit"</p>
+                <p>Changes committed successfully</p>
+
+                <p class="cursor">$ _</p>
+            </div>
+
         </div>
+
     </section>
 
-    <!-- About Section -->
-    <section class="about" id="about">
-        <h2>What is Git & GitHub?</h2>
+
+    <!-- Git workflow -->
+    <section class="workflow" id="workflow">
+
+        <h2>Understand Git Workflow</h2>
+
+        <p>How Git manages your project changes</p>
+
+        <div class="workflow-cards">
+
+            <div class="step">
+                <h3>01</h3>
+                <h4>Working Directory</h4>
+                <p>Modify your project files.</p>
+            </div>
+
+            <div class="arrow">→</div>
+
+            <div class="step">
+                <h3>02</h3>
+                <h4>Staging Area</h4>
+                <p>Select files using git add.</p>
+            </div>
+
+            <div class="arrow">→</div>
+
+            <div class="step">
+                <h3>03</h3>
+                <h4>Local Repository</h4>
+                <p>Save changes using git commit.</p>
+            </div>
+
+            <div class="arrow">→</div>
+
+            <div class="step">
+                <h3>04</h3>
+                <h4>GitHub</h4>
+                <p>Upload using git push.</p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Commands -->
+    <section class="commands" id="commands">
+
+        <h2>Essential Git Commands</h2>
+
+        <p>Click any command to copy it.</p>
+
+        <div class="command-grid">
+
+            <div class="command-card">
+                <h3>Initialize Repository</h3>
+                <code>git init</code>
+                <button onclick="copyCommand('git init')">Copy Command</button>
+            </div>
+
+            <div class="command-card">
+                <h3>Check Status</h3>
+                <code>git status</code>
+                <button onclick="copyCommand('git status')">Copy Command</button>
+            </div>
+
+            <div class="command-card">
+                <h3>Add Files</h3>
+                <code>git add .</code>
+                <button onclick="copyCommand('git add .')">Copy Command</button>
+            </div>
+
+            <div class="command-card">
+                <h3>Commit Changes</h3>
+                <code>git commit -m "message"</code>
+                <button onclick="copyCommand('git commit -m &quot;message&quot;')">Copy Command</button>
+            </div>
+
+            <div class="command-card">
+                <h3>Check Branch</h3>
+                <code>git branch</code>
+                <button onclick="copyCommand('git branch')">Copy Command</button>
+            </div>
+
+            <div class="command-card">
+                <h3>View History</h3>
+                <code>git log --oneline</code>
+                <button onclick="copyCommand('git log --oneline')">Copy Command</button>
+            </div>
+
+            <div class="command-card">
+                <h3>Download Repository</h3>
+                <code>git clone URL</code>
+                <button onclick="copyCommand('git clone URL')">Copy Command</button>
+            </div>
+
+            <div class="command-card">
+                <h3>Upload Changes</h3>
+                <code>git push</code>
+                <button onclick="copyCommand('git push')">Copy Command</button>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Interactive Terminal -->
+    <section class="terminal-section" id="terminal">
+
+        <h2>Practice Git Commands</h2>
+
+        <p>Try some basic Git commands in this simulated terminal.</p>
+
+        <div class="interactive-terminal">
+
+            <div class="terminal-header">
+                <span></span>
+                <span></span>
+                <span></span>
+                <p>Git Practice Terminal</p>
+            </div>
+
+            <div id="output" class="output">
+                Welcome to Git Practice Terminal!<br>
+                Type help to see available commands.
+            </div>
+
+            <div class="input-area">
+                <span>$</span>
+                <input
+                    type="text"
+                    id="commandInput"
+                    placeholder="Enter command..."
+                >
+                <button onclick="runCommand()">Run</button>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Repository -->
+    <section class="repository">
+
+        <h2>Your Developer Journey</h2>
 
         <p>
-            Git is a version control system that tracks
-            changes in your source code.
-
-            GitHub is an online platform where developers
-            store repositories and collaborate on projects.
+            Build projects, maintain repositories
+            and collaborate with developers worldwide.
         </p>
+
+        <a href="https://github.com/" target="_blank">
+            Explore GitHub →
+        </a>
+
     </section>
 
-    <!-- Features Section -->
-    <section class="features" id="features">
-        <h2>What Will You Learn?</h2>
-
-        <div class="cards">
-
-            <div class="card">
-                <h3>Git Basics</h3>
-                <p>Learn init, add, commit and status commands.</p>
-            </div>
-
-            <div class="card">
-                <h3>GitHub</h3>
-                <p>Learn repositories and upload your projects.</p>
-            </div>
-
-            <div class="card">
-                <h3>Branching</h3>
-                <p>Manage different versions of your code.</p>
-            </div>
-
-        </div>
-    </section>
 
     <!-- Footer -->
-    <footer id="contact">
-        <h3>Start Your Developer Journey Today!</h3>
-        <p>Learn. Build. Collaborate.</p>
-        <p>© 2026 GitHub Learn. All Rights Reserved.</p>
+    <footer>
+        <h3>GitHub Dev</h3>
+        <p>Learn Git. Track Changes. Build Together.</p>
+        <p>© 2026 Git Command Center</p>
     </footer>
+
+
+    <script src="index.js"></script>
 
 </body>
 </html>
